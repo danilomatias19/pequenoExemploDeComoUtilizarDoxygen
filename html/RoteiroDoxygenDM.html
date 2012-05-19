@@ -1,0 +1,408 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+		<title>RoteiroDoxygenDM</title>
+	</head>
+	<body>
+		<style>
+			.sh{
+					color: white;
+					font-size:bold;
+					background-color:black;
+					border-top-width:3px;
+					border-botton-width:3px;
+					border-rigth-width:3px;
+					border-left-width:3px;
+					border-top-style: solid;
+					border-botton-style: solid;
+					border-rigth-style: solid;
+					border-left-style: solid;
+					border-top-color: red;
+					border-botton-color: red;
+					border-rigth-color: red;
+					border-left-color: red;
+				}
+			a{
+				background-color:white;
+			}
+		</style>
+		<div style="text-align: center;">
+			<span style="font-weight: bold;">Roteiro de como instalar e colocar para funcionar um exemplo de documentação com Doxygen</span>
+			<br>
+			<div style="text-align: left;">
+				<ol>
+					  <li> <a href="#1_1definicao">O que é Doxygen ?</a>
+						<br /><ol>
+								<li>
+
+								<a href="#1_2maisinformacoes">Mais informações sobre que é Doxygen ?</a>
+								</li>
+							</ol>
+					  </li>
+					  <li> <a href="#2_1instalarDoxygen">Como Instalar Doxygen via apt-get no ubuntu ?</a></li>
+					  <li> <a href="#3_1pequenoexemplo">Como utilizá-lo, mostrarei um exemplo simples de código que documentei ?</a>
+					   <li> <a href="#4_maisinformacoes">Para mais informações acesse</a>
+
+					</li>
+				</ol>
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <a NAME="1_1definicao">1.1 - Definição</a>
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; "Doxygen é um gerador de documentação para C++, C, Java, Objective-C, Python, IDL (CORBA e variações da Microsoft), Fortran, VHDL, PHP, C#, e, até certo ponto, D.
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Este programa roda em sistemas Unix-like, Mac OS X, e no Windows." (Wikipedia,  Doxygen. Disponível em:&lt;<a href="http://pt.wikipedia.org/wiki/Doxygen" target="_blank">http://pt.wikipedia.org/wiki/Doxygen</a>&gt;.Acesso em: 18 de maio de 2012).
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; "Doxygen é uma ferramenta para geração de documentação e referências de códigos. A documentação é escrita utilizando código fonte e isto é realmente (incrivelmente) fácil." (Wikipedia)
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; "Da mesma forma que o Javadoc, o Doxygen extrai a documentação dos comentários do arquivo fonte. Além da syntax do Javadoc, o Doxygen suporta as marcações de documentação usadas no Qt toolkit e sua saída pode ser gerada em HTML bem como em CHM, RTF, PDF, LaTeX, PostScript ou man pages." (Wikipedia)
+				<br>
+				&nbsp;<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <a NAME="1_2maisinformacoes">1.2 - Para mais informações
+				acesse</a>:
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				<a href="http://dqsoft.blogspot.com.br/search?q=doxygen" target="_blank">http://dqsoft.blogspot.com.br/search?q=doxygen</a>
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				<a href="http://en.wikipedia.org/wiki/Doxygen" target="_blank">http://en.wikipedia.org/wiki/Doxygen</a>
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				<a href="http://www.stack.nl/~dimitri/doxygen/" target="_blank">http://www.stack.nl/~dimitri/doxygen/</a>
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				<a href="http://pt.scribd.com/doc/69753619/brams-doxygen" target="_blank">http://pt.scribd.com/doc/69753619/brams-doxygen</a>
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				<a href="http://phpbr.wordpress.com/2007/02/22/documentacao-de-codigo-doxygen-php/" target="_blank">http://phpbr.wordpress.com/2007/02/22/documentacao-de-codigo-doxygen-php/</a>
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				<a href="http://www.caloni.com.br/blog/archives/primeiros-passos-na-documentacao-de-codigo-fonte-usando-doxygen" target="_blank">http://www.caloni.com.br/blog/archives/primeiros-passos-na-documentacao-de-codigo-fonte-usando-doxygen</a>
+				<br>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				<a href="http://www.youtube.com/watch?v=GpSKuPEpJ8c&list=PL8CD016D5116369DF&feature=plpp_play_all" target="_blank">http://www.youtube.com/watch?v=GpSKuPEpJ8c&list=PL8CD016D5116369DF&feature=plpp_play_all</a>
+				&nbsp;<br />
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <a name="2_1instalarDoxygen">2.1 - Como Instalar Doxygen via
+				apt-get no ubuntu ?</a>
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Acesse:
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				<a href="http://www.lcad.inf.ufes.br/wiki/index.php/Guia_de_Utiliza%C3%A7%C3%A3o_do_Doxygen" target="_blank">http://www.lcad.inf.ufes.br/wiki/index.php/Guia_de_Utiliza%C3%A7%C3%A3o_do_Doxygen</a>
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; E siga as
+				instruções para a instalação
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 2.1.1 - Acesse também:
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				<a href="http://www.stack.nl/~dimitri/doxygen/doxywizard_usage.html" target="_blank">http://www.stack.nl/~dimitri/doxygen/doxywizard_usage.html</a>
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				<a href="http://www.stack.nl/~dimitri/doxygen/config.html" target="_blank">http://www.stack.nl/~dimitri/doxygen/config.html</a>
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				<a href="http://www.stack.nl/~dimitri/doxygen/install.html" target="_blank">http://www.stack.nl/~dimitri/doxygen/install.html</a>
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				<a href="http://www.stack.nl/~dimitri/doxygen/manual.html" target="_blank">http://www.stack.nl/~dimitri/doxygen/manual.html</a>
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				<a href="http://www.stack.nl/~dimitri/doxygen/download.html" target="_blank">http://www.stack.nl/~dimitri/doxygen/download.html</a>
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				<a href="http://www.stack.nl/~dimitri/doxygen/" target="_blank">http://www.stack.nl/~dimitri/doxygen/</a>
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				<a href="http://www.star.bnl.gov/public/comp/sofi/doxygen/doxywizard_usage.html" target="_blank">http://www.star.bnl.gov/public/comp/sofi/doxygen/doxywizard_usage.html</a>
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				<a href="http://www.stack.nl/~dimitri/doxygen/doxywizard_usage.html" target="_blank">http://www.stack.nl/~dimitri/doxygen/doxywizard_usage.html</a>
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 2.1.2 - É possível baixar o .deb
+				em:
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				<a href="http://packages.debian.org/search?keywords=doxygen" target="_blank">http://packages.debian.org/search?keywords=doxygen</a>
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 2.1.3 - Demonstrarei apenas como
+				instalar o doxygen no ubuntu via apt-get, sem compilação, nem nada,
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; para instalar
+				através de compilação consulte o manual em:
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				<a href="http://127.0.0.1/7/teste/phps/2/confsDoxygen/doxygen_manual-1.8.0.pdf" target="_blank">http://127.0.0.1/7/teste/phps/2/confsDoxygen/doxygen_manual-1.8.0.pdf</a>
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;2.1.3.1
+				- Para Instalar o Doxygen no ubuntu via apt-get:
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp; Abra o terminal (Tecle: [Ctrl] + [Alt] +[t], ou
+				então vá emAplicativos (ou tecle: [Alt]+[F1]) &gt; Acessórios &gt;
+				Terminal)
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;Demonstrarei esse exemplo
+				através de uma máquina virtual, vm, (<a href="https://www.virtualbox.org/wiki/Downloads" target="_blank">Virtual Box</a> - VirtualBox-OSE )
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;Nessa máquina está
+				instalado o sistema operacional ubuntu 10.04 (<a href="http://releases.ubuntu.com/lucid/" target="_blank">Lucid</a> ) de 64 bits (Amd64)
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;O ip dessa máquina é
+				10.1.1.20.
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;Logo para acessá-la via ssh
+				dou um
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ssh
+				dd@10.1.1.20
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Onde o ip da
+				minha máquina virtual (que está em mode bridge e possui o usuário dd)
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Utilizarei o Firessh para
+				conectar via ssh:
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <a href="http://firessh.mozdev.org/" target="_blank">http://firessh.mozdev.org/</a>
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Para acessar ssh através do mozilla eu digito na barra de endereços:
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <a href="ssh://dd@10.1.1.20/" target="_blank">ssh://dd@10.1.1.20/</a>
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Digito a minha senha e clico em ok <br / >&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; E pronto conecto via ssh.
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 2.1.3.1.1 - Uma vez acessado via
+				ssh dou um (no seu computador) no terminal:
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				<span class="sh" > sudo apt-get install&nbsp; graphviz libgraphviz4 doxygen doxygen-gui; cd Documentos; mkdir doxygendm1; cd doxygendm1; wget -c <a href="http://10.1.1.17/7/teste/phps/2_php/2_php.txt" target="_blank">http://10.1.1.17/7/teste/phps/2_php/2_php.txt</a>;wget -c
+				<a href="http://10.1.1.17/7/teste/phps/2/confsDoxygen/Doxyfileconf2php.txt" target="_blank">http://10.1.1.17/7/teste/phps/2/confsDoxygen/Doxyfileconf2php.txt</a>; ls
+				-l ; mkdir OUTPUT_DIRECTORY; mkdir source ; mv 2_php.txt source/2.php;
+				ls -l
+				</span>
+				<br>
+				&nbsp;<br>
+				&nbsp;<br>
+				&nbsp;<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <a name="3_1pequenoexemplo">3.1 - Pequeno exemplo</a>
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Para não
+				perdermos tempo codificando arquivos .php acesse:
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				<a href="http://10.1.1.17/7/teste/phps/2_php/2_php.txt" target="_blank">http://10.1.1.17/7/teste/phps/2_php/2_php.txt</a>
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; e
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				<a href="http://10.1.1.17/7/teste/phps/2/confsDoxygen/Doxyfileconf2php.txt" target="_blank">http://10.1.1.17/7/teste/phps/2/confsDoxygen/Doxyfileconf2php.txt</a>
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; O comando da
+				instalação já baixa o exemplo e a configuração do doxygen
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				<span class="sh" > wget -c<a href="http://10.1.1.17/7/teste/phps/2_php/2_php.txt" target="_blank">http://10.1.1.17/7/teste/phps/2_php/2_php.txt</a>;wget -c
+				<a href="http://10.1.1.17/7/teste/phps/2/confsDoxygen/Doxyfileconf2php.txt" target="_blank">http://10.1.1.17/7/teste/phps/2/confsDoxygen/Doxyfileconf2php.txt</a>
+				</span>
+				<br>
+				&nbsp;<br>
+				&nbsp;<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 3.1.1 - Agora
+				no terminal (Aplicativos &gt; Acessórios &gt; Terminal) da minha vm (No
+				seu computador) dou um:
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp;
+				<span class="sh" >doxywizard
+				</span>
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Após ter aberto o doxywizard
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 3.1.1.1 - Carrego o arquivo de
+				configuração Doxyfileconf2php.txt
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Para isso na
+				tela do doxygen aberta, vou em
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp; File &gt; open
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Seleciono o documento
+				~/Documentos/doxygendm1/Doxyfileconf2php.txt
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; No campo
+				Source Code Directory, clico no botão select,&nbsp; e o
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; faço apontar
+				para o caminho onde está meu código fonte, nesse caso no diretório,
+				~/Documentos/doxygendm1/source
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Já no campo,
+				Destination Directory, clico no&nbsp; botão select,&nbsp; e
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; faço apontar
+				para o caminho onde será gerada a documentação com o doxygen, nesse
+				caso no diretório, ~/Documentos/doxygendm1/OUTPUT_DIRECTORY
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 3.1.1.2 - Para certificar-me de
+				que o graphviz realmente encontra-se em /usr/lib/graphviz
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Abro o
+				terminal (Aplicativos &gt; Acessórios &gt; Terminal)&nbsp; e digito:
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp; whereis graphviz
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Se aparecer:
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp; graphviz: /usr/lib/graphviz ...
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Está tudo
+				certo, se não copie o que estiver aparecendo no lugar de:
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp; /usr/lib/graphviz
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Abra a aba
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp; &nbsp;Experts do doxywizard
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Após, na árvore da esquerda,
+				procure pelo nó Dot, se necessário mova a barra de rolagem de maneira a
+				visualizar toda a árvore, após encontrar&nbsp;&nbsp; o nó Dot, clique
+				nele
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; No formulário
+				que apareceu, procure pelo campo (Se necessário, mova a barra de
+				rolagem da direita, para baixo) :
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp; DOT_PATH
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Substitua o /usr/lib/graphviz,
+				pelo conteúdo copiado, ou então cole em cima de&nbsp; /usr/lib/graphviz
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Se aparecer
+				graphviz: /usr/lib/graphviz ..., também vá na aba Experts para conferir
+				se o campo&nbsp; DOT_PATH, está realmente
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; preenchido com
+				/usr/lib/graphviz, se estiver ok, está tudo certo.
+				<br>
+				&nbsp;<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 3.1.1.3 - Abra a aba Run do
+				doxywizard
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Clique no
+				botão Show Configuration
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp; Após clique no botão Run Doxygen
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Após clique no botão Show HTML
+				Output
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; E confira o
+				resultado da documentação gerada pelo doxygen apartir do arquivo:
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				~/Documentos/doxygendm1/source/2.php
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 3.2-&nbsp;&nbsp;&nbsp; Não gostou
+				dos arquivos ?
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Apague tudo de
+				uma vez digitando no terminal:
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp;<span class="sh" >rm -rfv ~/Documentos/doxygendm1/
+				</span>
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Para desinstalar o doxygen:
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span class="sh" >sudo apt-get
+				--purge remove graphviz libgraphviz4 doxygen doxygen-gui
+				</span>
+				<br>
+				&nbsp;<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <a name="4_maisinformacoes">4 -&nbsp;&nbsp;&nbsp; Para mais
+				informações acesse</a>:
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				<a href="http://10.1.1.17/7/teste/phps/2/confsDoxygen/doxygen.pdf" target="_blank">http://10.1.1.17/7/teste/phps/2/confsDoxygen/doxygen.pdf</a>
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				<a href="http://10.1.1.17/7/teste/phps/2/confsDoxygen/Doxygen%20Quick%20Reference.pdf" target="_blank">http://10.1.1.17/7/teste/phps/2/confsDoxygen/Doxygen%20Quick%20Reference.pdf</a>
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				<a href="http://10.1.1.17/7/teste/phps/2/confsDoxygen/dot.1.pdf" target="_blank">http://10.1.1.17/7/teste/phps/2/confsDoxygen/dot.1.pdf</a>
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				<a href="http://10.1.1.17/7/teste/phps/2/confsDoxygen/tutorial_de_doxygne_portugues_.pdf" target="_blank">http://10.1.1.17/7/teste/phps/2/confsDoxygen/tutorial_de_doxygne_portugues_.pdf</a>
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Manual:
+				<br>
+				&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				<a href="http://10.1.1.17/7/teste/phps/2/confsDoxygen/doxygen_manual-1.8.0.pdf" target="_blank">http://10.1.1.17/7/teste/phps/2/confsDoxygen/doxygen_manual-1.8.0.pdf</a>
+				<br>
+				Boa sorte com as documentações de seu projeto ai!
+				<br>
+				<br>
+			</div>
+		</div>
+	</body>
+</html>
