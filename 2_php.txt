@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<?php
+			$titulo="Teste simples de função para posteriormente documentar com Doxygen";
+		?>
+		 <style type="text/css">
+			#titulo, #corpo{display:block;text-align:center;	}#titulo{background-color:#F0FFFF;border-bottom-color: #000000;border-top-color: #000000;border-left-color: #000000;border-right-color: #000000;font-weight:bolder;font-family:Comic Sans MS, Times New Roman, Charcoal,sans-serif;border-bottom: 2px solid;border-top: 2px solid;border-left: 2px solid;border-right: 2px solid;font-size:large;} #corpo{border-bottom-color: #FF0000;border-top-color: #FFA500;border-bottom: 2px solid;border-top: 2px solid;border-left: 2px solid;border-right: 2px solid;	border-left-color:#8B4513;	border-right-color: #8B4513;border-top-color:#8B4513;border-botton-color: #8B4513;background-color:#FFF5EE;	}
+		</style>
+		<title><?=$titulo?></title>
+	</head>
+	<body>
+		<?php
+			/*!
+					* Funcao que exibe "Ae chamou a funcao1";
+					* @fn funcao1()
+					* @brief	Funcao que exibe "Ae chamou a funcao1"
+					* @file 2.php
+					*	@author  danilomatias19@gmail.com
+					*	@version 1.0
+					*	@date 13/05/2012
+					*	Como chamar esse metodo?
+					*	@example
+					*	funcao1();
+					* 	\callergraph
+					*	\callgraph
+					*/
+			function funcao1(){echo "Ae chamou a funcao1<br />";	}
+			/*!
+					* Funcao que exibe "Ae chamou a funcao2";
+					* @fn funcao2()
+					* @brief	Funcao que exibe "Ae chamou a funcao2"
+					* @file 2.php
+					*	@author  danilomatias19@gmail.com
+					*	@version 1.0
+					*	@date 13/05/2012
+					*	Como chamar esse metodo?
+					*	@example
+					*	funcao2();
+					* 	\callergraph
+					*	\callgraph
+					*/
+			function funcao2(){echo "Ae chamou a funcao2<br />";	}
+			function funcao3(){	echo "Ae chamou a funcao3<br />";}
+			/*!
+				*@fn funcaox($x)
+				* @brief	Funcao que exibe "Ae chamou a funcao".$x;
+				* @param $x; Valor numerico que aparecera em "Ae chamou a funcao".$parametro passado
+				* @return nao retorna nada
+				* @file 2.php
+				*	@author  danilomatias19@gmail.com
+				*	@version 1.0
+				*	@date 13/05/2012
+				*	Como chamar esse metodo?
+				*	@example
+				*	funcaox(2);
+				* 	\callergraph
+				*	\callgraph
+				*/
+			function funcaox($x){echo "Ae chamou a funcao".$x."<br />";}
+			/*!
+				*@fn funcaoy($y)
+				* @brief	Funcao que chamara outra funcao no formato "funcao.$y"
+				* @param $y; Valor numerico que chamra a funcao "funcao".$parametro_passado."();" "funcao".$y."()";
+				* @return nao retorna nada
+				* @file 2.php
+				*	@author  danilomatias19@gmail.com
+				*	@version 1.0
+				*	@date 13/05/2012
+				*	Como chamar esse método?
+				*	@example
+				*	funcaoy(1);
+				 * 	\callergraph
+				 *	\callgraph
+				*/
+			function funcaoy($y){$f="funcao".$y;  $f();	}
+			/*!
+				*@fn funcaoz()
+				* @brief	Funcao que chamara as funcoes 1, 2 e 3; funcao1(); funcao2(); funcao3();
+				* Faz isso atraves de um array(1,2,3,2,1)
+				* @return nao retorna nada
+				* @file 2.php
+				*	@author  danilomatias19@gmail.com
+				*	@version 1.0
+				*	@date 13/05/2012
+				*	Como chamar esse método?
+				*	@example
+				*	funcaoz();
+				* 	\callergraph
+				*	\callgraph
+				*
+				*/
+			function funcaoz(){foreach(array(1,2,3,2,1) as $z){   funcaoy($z);	}	}
+		?>
+			<div id="titulo">
+				<?=$titulo?>
+			</div>
+			<div id="corpo">
+				<?=funcaoz()?>
+			</div>
+	</body>
+</html>
