@@ -1,107 +1,112 @@
 Roteiro Doxygen:
 	1- O que é Doxygen ?
-	2 - Como Instalar Doxygen via apt-get no ubuntu ?
-	3- Como utilizá-lo, mostrarei um exemplo simples de código que documentei
+		1.1 - Mais informações sobre que é Doxygen ?
+	2- Como Instalar Doxygen via apt-get no ubuntu ?
+	3 - Como utilizá-lo, mostrarei um exemplo simples de código que documentei ?
+	4 - Para mais informações acesse
 		1.1 - Definição
-			"Doxygen é um gerador de documentação para C++, C, Java, Objective-C, Python, IDL (CORBA e variações da Microsoft), Fortran, VHDL, PHP, C#, e, até certo ponto, D.
-			Este programa roda em sistemas Unix-like, Mac OS X, e no Windows." (Wikipedia, Doxygen. Disponível em:<http://pt.wikipedia.org/wiki/Doxygen>.Acesso em: 18 de maio de 2012).
-			"Doxygen é uma ferramenta para geração de documentação e referências de códigos. A documentação é escrita utilizando código fonte e isto é realmente (incrivelmente) fácil." (Wikipedia)
-			"Da mesma forma que o Javadoc, o Doxygen extrai a documentação dos comentários do arquivo fonte. Além da syntax do Javadoc, o Doxygen suporta as marcações de documentação usadas no Qt toolkit e sua saída pode ser gerada em HTML bem como em CHM, RTF, PDF, LaTeX, PostScript ou man pages." (Wikipedia)
-
+		    "Doxygen é um gerador de documentação para C++, C, Java, Objective-C, Python, IDL (CORBA e variações da Microsoft), Fortran, VHDL, PHP, C#, e, até certo ponto, D.
+		    Este programa roda em sistemas Unix-like, Mac OS X, e no Windows." (Wikipedia, Doxygen. Disponível em:<http://pt.wikipedia.org/wiki/Doxygen>.Acesso em: 18 de maio de 2012).
+		    "Doxygen é uma ferramenta para geração de documentação e referências de códigos. A documentação é escrita utilizando código fonte e isto é realmente (incrivelmente) fácil." (Wikipedia)
+		    "Da mesma forma que o Javadoc, o Doxygen extrai a documentação dos comentários do arquivo fonte. Além da syntax do Javadoc, o Doxygen suporta as marcações de documentação usadas no Qt toolkit e sua saída pode ser gerada em HTML bem como em CHM, RTF, PDF, LaTeX, PostScript ou man pages." (Wikipedia)
 		1.2 - Para mais informações acesse:
-			http://dqsoft.blogspot.com.br/search?q=doxygen
-			http://en.wikipedia.org/wiki/Doxygen
-			http://www.stack.nl/~dimitri/doxygen/
-			http://pt.scribd.com/doc/69753619/brams-doxygen
-			http://phpbr.wordpress.com/2007/02/22/documentacao-de-codigo-doxygen-php/
-			www.caloni.com.br/blog/archives/primeiros-passos-na-documentacao-de-codigo-fonte-usando-doxygen
-
+		    http://dqsoft.blogspot.com.br/search?q=doxygen
+		    http://en.wikipedia.org/wiki/Doxygen
+		    http://www.stack.nl/~dimitri/doxygen/
+		    http://pt.scribd.com/doc/69753619/brams-doxygen
+		    http://phpbr.wordpress.com/2007/02/22/documentacao-de-codigo-doxygen-php/
+		    http://www.caloni.com.br/blog/archives/primeiros-passos-na-documentacao-de-codigo-fonte-usando-doxygen
+		    http://www.youtube.com/watch?v=GpSKuPEpJ8c&list=PL8CD016D5116369DF&feature=plpp_play_all
 		2.1 - Como Instalar Doxygen via apt-get no ubuntu ?
-			Ou acesse:
-			http://www.lcad.inf.ufes.br/wiki/index.php/Guia_de_Utiliza%C3%A7%C3%A3o_do_Doxygen
-			E siga as instruções para a instalação
+		    Acesse:
+		    http://www.lcad.inf.ufes.br/wiki/index.php/Guia_de_Utiliza%C3%A7%C3%A3o_do_Doxygen
+		    E siga as instruções para a instalação
 		2.1.1 - Acesse também:
-			http://www.stack.nl/~dimitri/doxygen/doxywizard_usage.html
-			http://www.stack.nl/~dimitri/doxygen/config.html
-			http://www.stack.nl/~dimitri/doxygen/install.html
-			http://www.stack.nl/~dimitri/doxygen/manual.html
-			http://www.stack.nl/~dimitri/doxygen/download.html
-			http://www.stack.nl/~dimitri/doxygen/
-			http://www.star.bnl.gov/public/comp/sofi/doxygen/doxywizard_usage.html
-			http://www.stack.nl/~dimitri/doxygen/doxywizard_usage.html
+		    http://www.stack.nl/~dimitri/doxygen/doxywizard_usage.html
+		    http://www.stack.nl/~dimitri/doxygen/config.html
+		    http://www.stack.nl/~dimitri/doxygen/install.html
+		    http://www.stack.nl/~dimitri/doxygen/manual.html
+		    http://www.stack.nl/~dimitri/doxygen/download.html
+		    http://www.stack.nl/~dimitri/doxygen/
+		    http://www.star.bnl.gov/public/comp/sofi/doxygen/doxywizard_usage.html
+		    http://www.stack.nl/~dimitri/doxygen/doxywizard_usage.html
 		2.1.2 - É possível baixar o .deb em:
-			http://packages.debian.org/search?keywords=doxygen
+		    http://packages.debian.org/search?keywords=doxygen
 		2.1.3 - Demonstrarei apenas como instalar o doxygen no ubuntu via apt-get, sem compilação, nem nada,
-			para instalar através de compilação consulte o manual em:
-			localhost/7/teste/phps/2/confsDoxygen/doxygen_manual-1.8.0.pdf
-			 2.1.3.1 - Para Instalar o Doxygen no ubuntu via apt-get:
-				Abra o terminal (Tecle: [Ctrl] + [Alt] +[t], ou então vá emAplicativos (ou tecle: [Alt]+[F1]) > Acessórios > Terminal)
-					 Demonstrarei esse exemplo através de uma máquina virtual, vm, (Virtual Box - VirtualBox-OSE )
-					 Nessa máquina está instalado o sistema operacional ubuntu 10.04 (Lucid) de 64 bits (Amd64)
-					 O ip dessa máquina é 10.1.1.20.
-					 Logo para acessá-la via ssh dou um
-						ssh dd@10.1.1.20
-						Onde o ip da minha máquina virtual (que está em mode bridge e possui o usuário dd)
-					Utilizarei o Firessh para conectar via ssh:
-					http://firessh.mozdev.org/
-					2.1.3.1.1 - Uma vez acessado via ssh dou um (no seu computador) no terminal:
-						sudo apt-get install  graphviz libgraphviz4 doxygen doxygen-gui; cd Documentos; mkdir doxygendm1; cd doxygendm1; wget -c http://10.1.1.17/7/teste/phps/2_php/2_php.txt;wget -c http://10.1.1.17/7/teste/phps/2/confsDoxygen/Doxyfileconf2php.txt; ls -l ; mkdir OUTPUT_DIRECTORY; mkdir source ; mv 2_php.txt source/2.php; ls -l
+		    para instalar através de compilação consulte o manual em:
+		    https://raw.github.com/danilomatias19/pequenoExemploDeComoUtilizarDoxygen/master/doxygen_manual-1.8.0.pdf
+		     2.1.3.1 - Para Instalar o Doxygen no ubuntu via apt-get:
+			Abra o terminal (Tecle: [Ctrl] + [Alt] +[t], ou então vá emAplicativos (ou tecle: [Alt]+[F1]) > Acessórios > Terminal)
+			     Demonstrarei esse exemplo através de uma máquina virtual, vm, (Virtual Box - VirtualBox-OSE )
+			     Nessa máquina está instalado o sistema operacional ubuntu 10.04 (Lucid ) de 64 bits (Amd64)
+			     O ip dessa máquina é 10.1.1.20.
+			     Logo para acessá-la via ssh dou um
+				ssh dd@10.1.1.20
+				Onde o ip da minha máquina virtual (que está em mode bridge e possui o usuário dd)
+			    Utilizarei o Firessh para conectar via ssh:
+			    http://firessh.mozdev.org/
+		Para acessar ssh através do mozilla eu digito na barra de endereços:
+		ssh://dd@10.1.1.20/
+		Digito a minha senha e clico em ok
+		    E pronto conecto via ssh.
+			    2.1.3.1.1 - Uma vez acessado via ssh dou um (no seu computador) no terminal:
+				sudo apt-get install  graphviz libgraphviz4 doxygen doxygen-gui; cd Documentos; mkdir doxygendm1; cd doxygendm1; wget -c https://raw.github.com/danilomatias19/pequenoExemploDeComoUtilizarDoxygen/master/2_php.txt;wget -c https://raw.github.com/danilomatias19/pequenoExemploDeComoUtilizarDoxygen/master/Doxyfileconf2php.txt; ls -l ; mkdir OUTPUT_DIRECTORY; mkdir source ; mv 2_php.txt source/2.php; ls -l
 
 
 
 		3.1 - Pequeno exemplo
-			Para não perdermos tempo codificando arquivos .php acesse:
-			http://10.1.1.17/7/teste/phps/2_php/2_php.txt
-			e
-			http://10.1.1.17/7/teste/phps/2/confsDoxygen/Doxyfileconf2php.txt
-			O comando da instação já baixa o exemplo e a configuração do doxygen
-			wget -c http://10.1.1.17/7/teste/phps/2_php/2_php.txt;wget -c http://10.1.1.17/7/teste/phps/2/confsDoxygen/Doxyfileconf2php.txt
+		    Para não perdermos tempo codificando arquivos .php acesse:
+		    https://raw.github.com/danilomatias19/pequenoExemploDeComoUtilizarDoxygen/master/2_php.txt
+		    e
+		    https://raw.github.com/danilomatias19/pequenoExemploDeComoUtilizarDoxygen/master/Doxyfileconf2php.txt
+		    O comando da instalação já baixa o exemplo e a configuração do doxygen
+		    wget -chttps://raw.github.com/danilomatias19/pequenoExemploDeComoUtilizarDoxygen/master/2_php.txt;wget -c https://raw.github.com/danilomatias19/pequenoExemploDeComoUtilizarDoxygen/master/Doxyfileconf2php.txt
 
 
-			3.1.1 - Agora no terminal (Aplicativos > Acessórios > Terminal) da minha vm (No seu computador) dou um:
-				doxywizard
-					Após ter aberto o doxywizard
-					3.1.1.1 - Carrego o arquivo de configuração Doxyfileconf2php.txt
-						Para isso na tela do doxygen aberta, vou em
-							File > open
-								Seleciono o documento ~/Documentos/doxygendm1/Doxyfileconf2php.txt
-									No campo Source Code Directory, clico no botão select,  e o
-									faço apontar para o caminho onde está meu código fonte, nesse caso no diretório, ~/Documentos/doxygendm1/source
-									Já no campo, Destination Directory, clico no  botão select,  e
-									faço apontar para o caminho onde será gerada a documentação com o doxygen, nesse caso no diretório, ~/Documentos/doxygendm1/OUTPUT_DIRECTORY
-					3.1.1.2 - Para certificar-me de que o graphviz realmente encontra-se em /usr/lib/graphviz
-						Abro o terminal (Aplicativos > Acessórios > Terminal)  e digito:
-							whereis graphviz
-						Se aparecer:
-							graphviz: /usr/lib/graphviz ...
-						Está tudo certo, se não copie o que estiver aparecendo no lugar de:
-							/usr/lib/graphviz
-						Abra a aba
-							 Experts do doxywizard
-								Após, na árvore da esquerda, procure pelo nó Dot, se necessário mova a barra de rolagem de maneira a visualizar toda a árvore, após encontrar   o nó Dot, clique nele
-									No formulário que apareceu, procure pelo campo (Se necessário, mova a barra de rolagem da direita, para baixo) :
-										DOT_PATH
-											Substitua o /usr/lib/graphviz, pelo conteúdo copiado, ou então cole em cima de  /usr/lib/graphviz
-						Se aparecer graphviz: /usr/lib/graphviz ..., também vá na aba Experts para conferir se o campo  DOT_PATH, está realmente
-						preenchido com /usr/lib/graphviz, se estiver ok, está tudo certo.
+		    3.1.1 - Agora no terminal (Aplicativos > Acessórios > Terminal) da minha vm (No seu computador) dou um:
+			doxywizard
+			    Após ter aberto o doxywizard
+			    3.1.1.1 - Carrego o arquivo de configuração Doxyfileconf2php.txt
+				Para isso na tela do doxygen aberta, vou em
+				    File > open
+					Seleciono o documento ~/Documentos/doxygendm1/Doxyfileconf2php.txt
+					    No campo Source Code Directory, clico no botão select,  e o
+					    faço apontar para o caminho onde está meu código fonte, nesse caso no diretório, ~/Documentos/doxygendm1/source
+					    Já no campo, Destination Directory, clico no  botão select,  e
+					    faço apontar para o caminho onde será gerada a documentação com o doxygen, nesse caso no diretório, ~/Documentos/doxygendm1/OUTPUT_DIRECTORY
+			    3.1.1.2 - Para certificar-me de que o graphviz realmente encontra-se em /usr/lib/graphviz
+				Abro o terminal (Aplicativos > Acessórios > Terminal)  e digito:
+				    whereis graphviz
+				Se aparecer:
+				    graphviz: /usr/lib/graphviz ...
+				Está tudo certo, se não copie o que estiver aparecendo no lugar de:
+				    /usr/lib/graphviz
+				Abra a aba
+				     Experts do doxywizard
+					Após, na árvore da esquerda, procure pelo nó Dot, se necessário mova a barra de rolagem de maneira a visualizar toda a árvore, após encontrar   o nó Dot, clique nele
+					    No formulário que apareceu, procure pelo campo (Se necessário, mova a barra de rolagem da direita, para baixo) :
+						DOT_PATH
+						    Substitua o /usr/lib/graphviz, pelo conteúdo copiado, ou então cole em cima de  /usr/lib/graphviz
+				Se aparecer graphviz: /usr/lib/graphviz ..., também vá na aba Experts para conferir se o campo  DOT_PATH, está realmente
+				preenchido com /usr/lib/graphviz, se estiver ok, está tudo certo.
 
-					3.1.1.3 - Abra a aba Run do doxywizard
-						Clique no botão Show Configuration
-							Após clique no botão Run Doxygen
-								Após clique no botão Show HTML Output
-						E confira o resultado da documentação gerada pelo doxygen apartir do arquivo:
-						~/Documentos/doxygendm1/source/2.php
-		3.2-	Não gostou dos arquivos ?
-			Apague tudo de uma vez digitando no terminal:
-				rm -rfv ~/Documentos/doxygendm1/
-					Para desinstalar o doxygen:
-						sudo apt-get --purge remove graphviz libgraphviz4 doxygen doxygen-gui
+			    3.1.1.3 - Abra a aba Run do doxywizard
+				Clique no botão Show Configuration
+				    Após clique no botão Run Doxygen
+					Após clique no botão Show HTML Output
+				E confira o resultado da documentação gerada pelo doxygen apartir do arquivo:
+				~/Documentos/doxygendm1/source/2.php
+		3.2-    Não gostou dos arquivos ?
+		    Apague tudo de uma vez digitando no terminal:
+		       rm -rfv ~/Documentos/doxygendm1/
+			    Para desinstalar o doxygen:
+				sudo apt-get --purge remove graphviz libgraphviz4 doxygen doxygen-gui
 
-		3.3 -	Para mais informações acesse:
-			localhost/7/teste/phps/2/confsDoxygen/doxygen.pdf
-			localhost/7/teste/phps/2/confsDoxygen/Doxygen%20Quick%20Reference.pdf
-			localhost/7/teste/phps/2/confsDoxygen/dot.1.pdf
-			localhost/7/teste/phps/2/confsDoxygen/tutorial_de_doxygne_portugues_.pdf
-			Manual:
-			localhost/7/teste/phps/2/confsDoxygen/doxygen_manual-1.8.0.pdf
+		4 -    Para mais informações acesse:
+		    https://raw.github.com/danilomatias19/pequenoExemploDeComoUtilizarDoxygen/master/doxygen.pdf
+		    https://raw.github.com/danilomatias19/pequenoExemploDeComoUtilizarDoxygen/master/Doxygen_Quick_Reference.pdf
+		    https://raw.github.com/danilomatias19/pequenoExemploDeComoUtilizarDoxygen/master/dot.1.pdf
+		    https://raw.github.com/danilomatias19/pequenoExemploDeComoUtilizarDoxygen/master/tutorial_de_doxygne_portugues_.pdf
+		    Manual:
+		    https://raw.github.com/danilomatias19/pequenoExemploDeComoUtilizarDoxygen/master/doxygen_manual-1.8.0.pdf
 Boa sorte com as documentações de seu projeto ai!
